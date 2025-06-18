@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import './AIchatbot.css';
 import ropot from '../assets/ropot2.png';
 import { X } from 'lucide-react';
-import { sendMessageToGemini } from './gemini'; // عدّل المسار حسب مكان الملف
-
+import { sendMessageToGemini } from './Gemini'; 
 
 const AIChatBot = () => {
     const [showChat, setShowChat] = useState(false);
