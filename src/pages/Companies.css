@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+}
+
+
+.comp_hero{
+padding: 1px 20px;
+  background-image: url('../assets/compn.png'); /* ✳️ غيّر الرابط دا حسب اسم الصورة */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.companies-title {
+      font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 1px;
+    margin-top: 53px;
+}
+
+.companies-title span {
+  color: #0050ff;
+}
+
+.companies-subtitle {
+  font-size: 16px;
+  color: #575757;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.company-section {
+  margin-bottom: 60px;
+}
+
+.company-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.company-box.left {
+  flex-direction: row-reverse;
+}
+
+.text {
+  flex: 1;
+  text-align: right;
+}
+
+.text h3 {
+  font-size: 30px;
+    margin-bottom: 12px;
+    font-weight: 400;
+    padding: 10px;
+    color: #05122f;
+}
+
+.text p {
+  font-size: 15px;
+    color: #444;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-weight: 500;
+    text-align: justify;
+    direction: rtl;
+}
+
+.text button {
+  background-color: #0050ff;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+.image-placeholder::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 100%;
+  height: 100%;
+   background-color: #eaeaea;
+  background-image: 
+    linear-gradient(45deg, #f1f1f1 25%, transparent 25%),
+    linear-gradient(-45deg, #f1f1f1 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #f1f1f1 75%),
+    linear-gradient(-45deg, transparent 75%, #f1f1f1 75%);
+     
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+  border-radius: 8px;
+  z-index: -1;
+}
+.image-placeholder {
+  width: 320px;
+    height: 380px;
+    position: relative;
+    z-index: 2;
+    border-radius: 8px;
+
+}
+
+
+.image-placeholder img{
+      width: 100%;
+    height: 94%;
+    border-radius: 9px;
+}
+
+
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .company-box {
+    flex-direction: column;
+    text-align: center;
+            border-bottom: .4px solid #0000ff70;
+        border-radius: revert;
+  }
+
+  .company-box.left {
+    flex-direction: column; /* ✅ تثبيت الاتجاه في الريسبونسيف */
+  }
+
+  .text {
+    text-align: center;
+  }
+
+  .image-placeholder {
+    width: 100%;
+    height: 200px;
+  }
+}

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+.navbar {
+  color: #000;
+  padding: 2rem 0;
+  direction: rtl;
+  font-family: 'Cairo', sans-serif;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+}
+
+/* قائمة الروابط */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #1141D8;
+}
+
+/* زر المينيو للموبايل */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 1100;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background-color: #000;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* 🎯 ريسبونسيف */
+@media (max-width: 768px) {
+  
+  .container {
+    flex-direction: row-reverse; /* هذا سيضع زر القائمة على اليمين */
+    justify-content: space-between;
+  }
+
+  .menu-toggle {
+    display: flex;
+    order: 1; /* سيظل على اليمين بسبب row-reverse */
+    margin-bottom: 6px;
+  }
+
+  .logo {
+    order: 2; /* سيظل على اليسار بسبب row-reverse */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-color: #1141d8;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+  }
+
+  
+  .nav-links.open {
+    max-height: 400px;
+    z-index: 10;
+  }
+
+  .nav-links li {
+    padding: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+  }
+
+  .nav-links li a {
+    color: #fff;
+    font-size: 18px;
+  }
+
+  .logo img {
+    width: 110px;
+  }
+}

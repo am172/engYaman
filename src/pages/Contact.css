@@ -1,0 +1,224 @@
+.contact-page {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  background-color: #EBEBEB;
+  overflow: hidden;
+}
+
+.contact-header {
+  text-align: center;
+  padding: 2rem;
+}
+
+.contact-header h1 {
+ font-size: 70px;
+    margin-bottom: 1rem;
+    /* line-height: 104px; */
+    font-weight: 500;
+}
+
+.contact-header p {
+  font-size: 18px;
+  color: #3C3C3C;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+
+.contact-section {
+  background-image: url('../assets/Group.png');
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 2rem;
+  position: relative;
+      width: 66%;
+    margin: 0 auto;
+}
+
+.contact-overlay {
+  background-color: transparent; /* شيلنا الأبيض */
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.linkes{
+    display: grid;
+grid-template-columns: repeat(2,1fr);
+column-gap: 28px;
+margin-right: 41px;
+}
+
+.contact-container {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  color: white; /* لون النص */
+}
+
+.contact-form,
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-form h2,
+.contact-info h2 {
+  font-size: 28px;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 16px;
+  color: white;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 70%;
+  padding: 0.5rem 0;
+  margin-bottom: 1.5rem;
+  border: none;
+  border-bottom: 2px solid white;
+  background: transparent;
+  color: white;
+  font-family: 'Cairo', sans-serif;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form button {
+  background-color: white;
+    color: #1141D8;
+    padding: 0.7rem 4rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 1rem;
+    /* text-align: center; */
+    margin: 0 auto;
+font-family: 'Cairo', sans-serif;
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  font-size: 18px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.contact-info-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+        margin: 0 auto;
+                margin-right: -28px;
+  }
+
+  .contact-section {
+    background-image: none;
+  }
+
+ .contact-info {
+        background-image: url(/src/assets/about2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 2rem;
+        border-radius: 10px;
+        /* text-align: center; */
+        color: white;
+        /* height: fit-content; */
+        margin-right: -42%;
+        width: 200px;
+}
+.contact-info p{
+  font-size: 13px;
+}
+
+.linkes {
+  display: flex;
+  flex-direction: column; /* صفوف */
+  align-items: center;
+  gap: 0;
+  margin: 0 auto;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* تخليهم في النص */
+  color: white;
+}
+
+
+  .contact-form h2,
+  .contact-info h2 {
+    font-size: 28px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    color: #000;
+    border-bottom: 1px solid #a29b9ba6;
+    background: transparent; /* بدون خلفية */
+  }
+
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: rgb(0, 0, 0); /* رمادي غامق للبلس هولدر */
+  }
+
+  .contact-header h1 {
+    font-size: 36px;
+  }
+
+  .contact-header p {
+    font-size: 15px;
+    max-width: 100%;
+    text-align: center;
+    line-height: normal;
+  }
+  .contact-form button {
+  background-color: #1141D8;
+    color: white;
+}
+}

@@ -1,0 +1,22 @@
+.map-container {
+  width: 100%;
+  height: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+/* لما الشاشة تبقى صغيرة */
+@media (max-width: 768px) {
+  .map-container {
+           height: 408px;
+        /* width: 95%; */
+        /* margin: 14px auto; */
+        border-radius: 8px;
+        margin-left: 355px;
+        margin-right: -2px;
+  }
+}
+
+
+
