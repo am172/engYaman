@@ -11,12 +11,19 @@
   transform: scale(1.1);
 }
 
+.suggested-questions.bottom {
+  border-top: 1px solid #ddd;
+  border-bottom: none;
+  margin-top: auto;
+}
+
+
 .ai-chat-box {
  position: fixed;
     bottom: 20px;
     right: 20px;
     width: 509px;
-    height: 607px;
+    height: 680px;
     max-height: 99vh;
     background: white;
     border: 2px solid #007bff;
@@ -120,10 +127,14 @@
 }
 
 .suggested-questions {
-  padding: 14px;
-  background: #f4f7fa;
-  border-bottom: 1px solid #ddd;
+  padding: 10px 14px;
+    background: #f4f7fa;
+    border-bottom: 3px solid #007bff;
+    font-size: 14px;
+    max-height: 176px;
+    overflow-y: auto;
 }
+
 
 .suggested-title {
   font-weight: bold;
@@ -169,3 +180,4 @@
 
  
 }
+
