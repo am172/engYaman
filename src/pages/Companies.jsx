@@ -54,7 +54,7 @@ const Companies = () => {
                         <div className="text">
                             <h3>{company.title}</h3>
                             <p>{company.desc}</p>
-                            <a href="/products">
+                            <a href="/about">
                                 <button>تعرف على منتجاتنا</button>
                             </a>
                             
