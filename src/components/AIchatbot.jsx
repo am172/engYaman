@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import './AIchatbot.css';
 import ropot from '../assets/ropot2.png';
 import { X } from 'lucide-react';
-import { sendMessageToGemini } from './Gemini'; 
+import { sendMessageToGemini } from './gemini'; // عدّل المسار حسب مكان الملف
+
 
 const AIChatBot = () => {
     const [showChat, setShowChat] = useState(false);
@@ -47,42 +48,41 @@ const AIChatBot = () => {
                 />
             )}
 
-            {showChat && (
-                <div className="ai-chat-box">
-                    <div className="chat-header">
-                        <span>مساعد الشركة</span>
-                        <X className="close-btn" onClick={() => setShowChat(false)} />
-                    </div>
+           {showChat && (
+  <div className="ai-chat-box">
+    <div className="chat-header">
+      <span>مساعد الشركة</span>
+      <X className="close-btn" onClick={() => setShowChat(false)} />
+    </div>
 
-                    {messages.length === 0 && (
-                        <div className="suggested-questions">
-                            <p className="suggested-title">👋 يمكنك البدء بالأسئلة التالية:</p>
-                            <ul>
-                                {suggestedQuestions.map((q, idx) => (
-                                    <li key={idx} onClick={() => handleSuggestedClick(q)}>{q}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    )}
+    <div className="suggested-questions">
+      <p className="suggested-title">👋 يمكنك البدء بالأسئلة التالية:</p>
+      <ul>
+        {suggestedQuestions.map((q, idx) => (
+          <li key={idx} onClick={() => handleSuggestedClick(q)}>{q}</li>
+        ))}
+      </ul>
+    </div>
 
-                    <div className="chat-messages">
-                        {messages.map((msg, i) => (
-                            <div key={i} className={`msg ${msg.sender}`}>{msg.text}</div>
-                        ))}
-                    </div>
+    <div className="chat-messages">
+      {messages.map((msg, i) => (
+        <div key={i} className={`msg ${msg.sender}`}>{msg.text}</div>
+      ))}
+    </div>
 
-                    <div className="chat-input">
-                        <input
-                            type="text"
-                            placeholder="اكتب سؤالك هنا..."
-                            value={userInput}
-                            onChange={(e) => setUserInput(e.target.value)}
-                            onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-                        />
-                        <button onClick={handleSend}>إرسال</button>
-                    </div>
-                </div>
-            )}
+    <div className="chat-input">
+      <input
+        type="text"
+        placeholder="اكتب سؤالك هنا..."
+        value={userInput}
+        onChange={(e) => setUserInput(e.target.value)}
+        onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+      />
+      <button onClick={handleSend}>إرسال</button>
+    </div>
+  </div>
+)}
+
         </>
     );
 };
