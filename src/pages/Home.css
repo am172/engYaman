@@ -116,12 +116,11 @@ button {
 }
 
 .hero-left .worker {
-  position: relative;
-    width: 785px;
+      position: relative;
+    width: 786px;
     /* height: 541px; */
     top: 9px;
-    left: 182px;
-
+    left: 185px;
 }
 .worker-mobile {
   display: none;
@@ -142,6 +141,7 @@ button {
 }
 .hero-navbar .logo{
       width: 168px;
+          margin-top: -16px;
 }
 
 .full-text {
@@ -300,16 +300,13 @@ text-align: justify;
   flex: 0.9;
   cursor: pointer;
 }
-#sideP:hover{
-  background-color: #0044ff49;
-}
 
 #sideP{
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
-  margin-top: 96px;
 }
+
 
 /* لما يحصل hover، الطبقة الزرقاء تظهر */
 .img-container:hover::after {
@@ -909,16 +906,17 @@ background-image: url(/src/assets/Group.png);
 /* Mobile screens */
 @media (max-width: 767px) {
   .hero-section {
-    background-image: url(/src/assets/Vector2.png);
-        height: 531px;
+    background-image: url('../assets/Vector2.png'); /* الصورة البديلة للموبايل */
+    height: 531px;
         /* padding: 20px 10px; */
-        width: 338px;
-        margin: 0 auto;
+        width: 384px;
+        margin: 0;
   }
    .full-text {
     display: none;
   }
-   .partners-logos {
+
+.partners-logos {
   display: grid;
   grid-template-columns: repeat(2,1fr);
 }
@@ -1073,6 +1071,7 @@ background-image: url(/src/assets/Group.png);
     object-fit: cover;
     margin-top: -13px;
     margin-bottom: -49px;
+    margin: 0 auto;
 }
 .details p{
   padding: 0 35px;
