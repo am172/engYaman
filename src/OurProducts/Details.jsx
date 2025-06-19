@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import productData from "./ProductDetails";
 import "./ProductDetails.css";
@@ -14,9 +15,24 @@ const ProductDetails = () => {
         setSelectedOptions({ ...selectedOptions, [key]: value });
     };
 
+    const handleWhatsAppOrder = () => {
+        const phoneNumber = "201118069683"; // رقمك بصيغة دولية بدون +
+        const productTitle = productData.title;
+
+        const selectedText = Object.entries(selectedOptions)
+            .map(([key, val]) => `${key}: ${val}`)
+            .join("\n");
+
+        const message = `مرحبًا، أود طلب عينة من المنتج التالي:\n\n${productTitle}\n${selectedText ? "\nالخيارات المختارة:\n" + selectedText : ""}`;
+
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+        window.open(whatsappUrl, "_blank");
+    };
+
     return (
         <div className="product-page">
-            {/* Section: Search & Categories */}
             <div className="navbor">
                 <Navbar />
             </div>
@@ -25,8 +41,6 @@ const ProductDetails = () => {
                 <div className="search-bar">
                     <input type="text" placeholder="🔍 بحث..." />
                 </div>
-
-
 
                 <div className="categories">
                     {["الجبس", "الكهرباء", "الرخام", "التكييف", "المعلومات", "العزل", "ألواح ساندوتش", "جبس بورد", "اكسسوارات"].map((cat, i) => (
@@ -38,18 +52,18 @@ const ProductDetails = () => {
                         </div>
                     ))}
                 </div>
+
                 <div className="pathes">
                     <p>
                         منتاجتنا / مواد بناء / الجبس / <span style={{ color: "#1141D8" }}>اسقف جبس مثقب</span>
                     </p>
-
-
                 </div>
-                {/* Section: Product Info */}
+
                 <div className="product-info">
                     <div className="product-text">
                         <h2>{productData.title}</h2>
                         <p>{productData.description}</p>
+
                         <div className="product-options">
                             {Object.entries(productData.options).map(([key, values], i) => (
                                 <div className="option-group" key={i}>
@@ -63,20 +77,22 @@ const ProductDetails = () => {
                                 </div>
                             ))}
                         </div>
-                        <button className="sample-button">طلب عينة</button>
+
+                        <button className="sample-button" onClick={handleWhatsAppOrder}>
+                            طلب عينة
+                        </button>
                     </div>
+
                     <div className="product-image">
                         <img src={productData.image} alt={productData.title} />
                     </div>
                 </div>
 
-                {/* Section: Overview */}
                 <div className="overview">
                     <h3>نظرة عامة</h3>
                     <p>{productData.overview}</p>
                 </div>
 
-                {/* Section: Catalogs */}
                 <div className="catalogs">
                     <div className="tabs">
                         {productData.catalogs.map((cat) => (
@@ -100,16 +116,13 @@ const ProductDetails = () => {
                         ) : (
                             <p>{productData.catalogs.find((c) => c.id === activeCatalog)?.content}</p>
                         )}
-
-                        {/* <a className="download-icon" href="#" title="تنزيل الكتالوج">📥</a> */}
                     </div>
                 </div>
-
             </div>
 
             <BlueCards />
-            <AIChatBot/>
-            <Footer/>
+            <AIChatBot />
+            <Footer />
         </div>
     );
 };
