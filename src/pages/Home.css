@@ -909,11 +909,11 @@ background-image: url(/src/assets/Group.png);
 /* Mobile screens */
 @media (max-width: 767px) {
   .hero-section {
-    background-image: url('../assets/Vector2.png'); /* الصورة البديلة للموبايل */
-    height: 531px;
+    background-image: url(/src/assets/Vector2.png);
+        height: 531px;
         /* padding: 20px 10px; */
-        width: 384px;
-        margin: 0;
+        width: 338px;
+        margin: 0 auto;
   }
    .full-text {
     display: none;
