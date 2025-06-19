@@ -918,6 +918,16 @@ background-image: url(/src/assets/Group.png);
    .full-text {
     display: none;
   }
+   .partners-logos {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.partners-logos img {
+    width: 78%;
+    max-width: 220px;
+    height: auto;
+    object-fit: contain;
+}
 
   .short-text {
     display: block;
