@@ -16,12 +16,15 @@ import insulationImage from "../assets/Frame 22 (1).png";
 import cementImage from "../assets/Frame 22 (2).png";
 import marbleImage from "../assets/Frame 48.png";
 import gypsumImage from "../assets/Frame 49.png";
-import partner from "../assets/Frame 48 (1).png"
-import partner1 from "../assets/Frame 49 (1).png"
-import partner2 from "../assets/Frame 50.png"
-import partner3 from "../assets/Frame 51.png"
-import partner4 from "../assets/Frame 52.png"
-import partner5 from "../assets/Frame 53.png"
+
+import partner from "../assets/productsData/Frame 48.png"
+import partner1 from "../assets/productsData/Frame 49.png"
+import partner2 from "../assets/productsData/Frame 50.png"
+import partner3 from "../assets/productsData/Frame 51.png"
+import partner4 from "../assets/productsData/Frame 52.png"
+import partner5 from "../assets/productsData/Frame 53.png"
+
+
 import comp from "../assets/productsData/charts.png"
 import img from "../assets/projects/image.svg"
 import img1 from "../assets/projects/image-1.svg"
@@ -178,7 +181,7 @@ const Home = () => {
 
             {/* PARTNERS */}
             <div className="partners-section">
-                <h4>شركائنا في <span className="highlight">النجاح</span></h4>
+                <h4>شركائنا في <span style={{color:"rgb(126 124 124)"}}>النجاح</span></h4>
                 <p>
                     تندرج تحت مظلة "شركة العربية للاستثمار" خمس شركات متخصصة تعمل كل منها على تحقيق الجودة والكفاءة في مجالها وتلبية احتياجات السوق السعودي بمستوى عال من الاحترافية
                 </p>
