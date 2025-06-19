@@ -827,8 +827,86 @@ text-align: justify;
 
 
 /* RESPONSIVE */
-/* Tablet screens */
+
 @media (max-width: 1024px) {
+  .hero-section {
+    height: auto;
+background-image: url(/src/assets/Group.png);
+    padding: 40px 20px;
+    width: 90%;
+    font-size: 11px;
+  }
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-right {width: 53%;
+        /* padding: 20px 0; */
+        margin-left: 399px;
+        margin-bottom: 10px;
+  }
+
+  .hero-p {
+    width: 100%;
+    font-size: 18px;
+    margin: 20px 0 0 0;
+  }
+
+  .hero-left {
+    width: 100%;
+    align-items: center;
+    gap: 15px;
+  }
+
+      .hero-left .worker {
+        display: block;
+        width: 75%;
+        position: static;
+        margin-right: 321px;
+        margin-top: 0px;
+    }
+  .worker-mobile {
+  display: none;
+  }
+
+   .buttons-container {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    top: 28px;
+}
+  .hero-navbar ul {
+            flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+        gap: 14px;
+        font-size: 11px;
+        margin-right: 165px;
+  }
+
+  .hero-navbar ul .logogo {
+    margin: 10px 0 0 0;
+  }
+  .hero-content h1 {
+            font-size: 50px;
+        margin-top: -199px;
+}
+.hero-navbar .logo {
+    width: 157px;
+    margin-top: -19px;
+    margin-left: -45px;
+}
+  
+}
+
+
+
+
+
+
+/* Tablet screens */
+@media (max-width: 1022px) {
   .hero-section {
     height: auto;
 background-image: url(/src/assets/Group.png);
@@ -859,11 +937,11 @@ background-image: url(/src/assets/Group.png);
     gap: 15px;
   }
 
-      .hero-left .worker {
+       .hero-left .worker {
         display: block;
-        width: 75%;
+        width: 87%;
         position: static;
-        margin-right: 256px;
+        margin-right: 186px;
         margin-top: 41px;
     }
   .worker-mobile {
@@ -1392,4 +1470,3 @@ background-image: url(/src/assets/Group.png);
   width: 68%;
 }
 }
-
