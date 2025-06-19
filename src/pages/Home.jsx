@@ -71,7 +71,7 @@ const Home = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-        }, 4000); // كل 20 ثانية
+        }, 6000); // كل 20 ثانية
 
         return () => clearInterval(interval);
     }, []);
@@ -105,13 +105,13 @@ const Home = () => {
                             <nav className="hero-navbar">
                                 <button id="mobile-menu" className="menu-toggle" onClick={toggleMenu}>☰</button>
                                 <ul className={`navbar-list ${menuOpen ? 'open' : ''}`}>
+                                    <li className="logogo"><img className="logo" src={logo1} alt="لوجو" /></li>
                                     <li><a href="/home">الرئيسية</a></li>
                                     <li><a href="/about">تعرف عنا</a></li>
                                     <li><a href="/products">منتجاتنا</a></li>
                                     <li><a href="/companies">الشركات التابعة</a></li>
                                     <li><a href="#">شركاؤنا</a></li>
                                     <li><a href="/contact">تواصل معنا</a></li>
-                                    <li className="logogo"><img className="logo" src={logo1} alt="لوجو" /></li>
                                 </ul>
                             </nav>
 
