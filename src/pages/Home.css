@@ -860,16 +860,14 @@ background-image: url(/src/assets/Group.png);
 
   }
 
-  .hero-left .worker {
-    
-             display: block;
-        width: 86%;
-        /* max-width: 350px; */
+
+      .hero-left .worker {
+        display: block;
+        width: 83%;
         position: static;
-        margin-right: 191px;
-        margin-top: 47px;
-    
-  }
+        margin-right: 256px;
+        margin-top: 41px;
+    }
   .worker-mobile {
   display: none;
   }
